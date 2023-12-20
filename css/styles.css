@@ -235,7 +235,6 @@ section{
 .shepherdsImg img{
   width: 120px;
   border-radius: 50%;
-
 }
 /* ---------------- Radio */
 .radioHome{
@@ -621,7 +620,7 @@ a:hover{
     font-size: 1.6rem;
   }
   .form-bg{
-    width: 95%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 20px;
