@@ -1,0 +1,543 @@
+@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+Collegiate+One&family=Roboto:wght@400;900&display=swap');
+
+:root{
+  --first-color:#fff;
+  --third-color: #333;
+  --second-color: rgba(51, 230, 155, 0.822);
+  --fuente: 'Roboto', sans-serif;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+}
+body{
+/* fuentes */
+    font-family: var(--fuente);
+    text-transform: capitalize;    
+}
+
+header{
+  height: 100vh;
+  width: 100vw;
+  background-image: url(../img/header.jpg);
+  background-size: cover;
+  display: flex;
+  background-position: center; /* Añadido para centrar la imagen */
+  flex-direction: column; /* Cambiamos a columna para diseño móvil */
+  justify-content: center; /* Centramos verticalmente */
+  align-items: center; /* Centramos horizontalmente */
+  text-align: center; /
+}
+ul{
+  list-style-type: none;
+}
+/* Texto header */
+.titleFamily{
+  color: var(--first-color);
+  font-family: var(--fuente);
+}
+.textFamily{
+  color: var(--first-color);
+  font-family: var(--fuente);
+}
+/* Menu */
+/* .menuIcon{
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 1.0em;
+  cursor: pointer;
+} */
+.navbar.fixed .menuIcon{
+  top: 10px;
+  right: 10px;
+  border-radius: 50%;
+  padding: 10px;
+}
+.navbar.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-shadow: 0 4px 2px rgba(44, 40, 40, 0.1);
+  z-index: 1000; /* Asegúrate de que tenga un índice de apilamiento alto */
+  background-color: #4444443d;
+}
+.navbar{
+  position: absolute;
+  padding:25px;
+  display: flex;
+  justify-content: space-between;
+  align-self: center;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: transparent;
+ 
+}
+.navbar a{
+  color: var(--first-color);
+}
+.navbar .logo{
+  font-size: 2em;
+  font-weight: bold;
+  text-decoration: none;
+  list-style-type:  none;
+}
+.navbar .navLinks{
+  display: flex;
+  align-items: center;
+}
+.navbar .navLinks ul{
+  display: flex;
+  margin-right: 20px;
+}
+.navbar .navLinks ul li{
+  margin: 0 25px;  
+}
+.navbar .navLinks ul li a{
+  text-decoration: none;
+  list-style-type:  none;
+}
+.navbar .navLinks ul li.active a{
+  color: var(--second-color) ;
+  font-weight: 600;
+  text-decoration: none;
+  list-style-type:  none;
+}
+.navbar .menuIcon{
+  display: block;
+  cursor: pointer;
+  order: -1;
+}
+.navbar .menu-hamburguer{
+  display: none;
+}
+/* ---------- Comentarios de la iglesia */
+.comment-section {
+  display: flex;
+  flex-direction: column; /* Cambiamos a columna para diseño móvil */
+  justify-content: center;
+  align-items: center;
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 20px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.comment-content {
+  display: flex;
+  flex-direction: column; /* Cambiamos a columna para diseño móvil */
+  align-items: center;
+}
+
+.comment-info {
+  display: flex;
+  align-items: center;
+}
+
+.comment-icon {
+  font-size: 2em;
+  color: var(--second-color);
+  margin-right: 15px;
+}
+
+.comment-title {
+  font-size: 1.2em;
+  color: #333;
+  margin: 0;
+}
+
+.comment-text {
+  color: #333;
+  text-align: center; /* Centramos el texto */
+}
+
+.comment-image {
+  width: 200px; /* Ajustamos el tamaño de la imagen */
+  height: 200px; /* Ajustamos el tamaño de la imagen */
+  overflow: hidden;
+  border-radius: 50%;
+  border: 2px solid #ddd;
+  margin-top: 15px; /* Espacio entre el texto y la imagen */
+}
+
+.comment-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.comment-image:hover img {
+  transform: scale(1.1);
+}
+ /* ------------------Formulario */
+
+ 
+/* advertisements //  shepherds/* -----swipper */
+ 
+.swipper{
+  width: 100%;
+  padding: 150px 0 50px 0;
+  
+}
+.mySwiper{
+  margin: 55px;
+}
+.swiper-slide{
+  width: 300px!important;
+  height: 500px;
+  border-radius: 5%;
+  background-color: var(--first-color);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  padding: 40px;
+  text-align: center;
+}
+.icons{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+.icons i{
+  font-size: 26px;
+  color: var(--second-color);
+}
+.icons img{
+  width: 120px;
+}
+.shepherdsContent{
+  display: flex;
+  justify-content: space-between;
+}
+.shepherdsText{
+  flex-basis: 50%;
+  text-align: left;
+  margin: 10px;
+  padding: 5px;
+}
+.shepherdsText h3{
+  font-size: 20px;
+  margin: 5px;
+  text-transform: uppercase;
+}
+.shepherdsText p{
+  font-size: 14px;
+}
+.shepherdsImg{
+  flex-basis: 50%;
+  text-align: right;
+}
+.shepherdsImg img{
+  width: 120px;
+  border-radius: 50%;
+
+}
+/* ---------------- Form */
+.form-bg{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(rgba(0 0 0 / .8), rgba(0 0 0 / .8)), url(../img/escritorio.jpg);
+  background-size: cover;
+  grid-template-columns: repeat(2,50%);
+  padding: 20px;
+  gap: 10px;
+  width: 100%;
+}
+.boxInfo{
+  color: var(--first-color);
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+.boxInfo > h2{
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+.data{
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.data > p{
+  font-size: 1rem;
+}
+.data > p > i{
+  color: var(--second-color);
+  margin-right: 10px;
+  font-size: 25px;
+}
+.linkIconForm{
+  color: var(--first-color);
+  text-decoration: none;
+  font-size: 20px;
+  margin-left: 15px;
+}
+.data > i {
+  color: var(--second-color);
+  margin-right: 10px;
+  font-size: 25px;
+
+}
+form{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 15px;
+}
+.input-box{
+  position: relative;
+}
+
+.input-box > input{
+  width: 100%;
+  height: 40px;
+  padding: 0 10px;
+  outline: none;
+  background: rgba(0 0 0 / .5);
+  border: 3px solid transparent;
+  letter-spacing: 1px;
+  transition: .3s;
+  color: var(--first-color);
+}
+/* cuando hacemos click se sub */
+.input-box > input:focus,
+.input-box > textarea:focus {
+  border-bottom: 3px solid var(--second-color);
+  animation: shake .2s;
+}
+.input-box > input::placeholder,
+.input-box > textarea::placeholder {
+  color: #a3a3a3;
+}
+.input-box > input:focus::placeholder,
+.input-box > textarea:focus::placeholder {
+  color: transparent;
+}
+.input-box > textarea {
+  width: 100%;
+  height: 130px;
+  background: rgba(0 0 0 / .5);
+  border: 3px solid transparent;
+  letter-spacing: 1px;
+  transition: .3s;
+  color: var(--first-color);
+  padding: 10px;
+  outline: none;
+}
+.input-box > i{
+  background: rgba(0 0 0 / .5);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 15px;
+  transition: .3s;
+}
+.input-box > input:focus ~ i {
+  color: var(--second-color)
+}
+form > button{
+  background: var(--second-color);
+  color: var(--first-color);
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 10px;
+  transition: .2s;
+}
+form > button:hover,
+a:hover{
+  background: seagreen;
+}
+/* Retumb */
+@keyframes shake{
+  0%, 100% {transform: translateX(0);}
+  10%, 30%, 50%, 70%, 90%{transform: translateX(-10px);}
+  20%, 40%, 60%, 80% {transform: translateX(10px);}
+}
+
+/* ------------------------ footer */
+.container-footer{
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.footer{
+  background-color: #4444443d ;
+  padding: 80px 0;
+}
+.footerRow{
+  display: flex;
+  flex-wrap: wrap;
+}
+.footerLinks{
+  width: 25%;
+  padding: 0 15px;
+}
+.footerLinks h5{
+  font-size: 20px;
+  margin-bottom: 25px;
+  font-weight: 500;
+  border-bottom: 2px solid var(--second-color);
+  padding-bottom: 10px;
+  display: inline-block;
+}
+.footerLinks ul li a{
+  font-size: 18px;
+  text-decoration: none;
+  color: var(--third-color);
+  display: block;
+  margin-bottom: 15px;
+  transition: all .3s ease;
+}
+.footerLinks ul li a:hover{
+  color: var(--second-color);
+  padding-left: 6px;
+}
+.socialLink a{
+  display: inline-block;
+  min-height: 40px;
+  width: 40px;
+  background-color: rgba(255, 255, 255, 0.3);
+  margin: 0 10px 10px 0;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: var(--second-color);
+  transition: all .5s ease;
+}
+.socialLink a:hover{
+  background-color: var(--third-color);
+}
+
+/* --------------------Responsive  */
+@media screen and (max-width: 900px) {
+  .navbar{
+    padding:20px;
+    justify-content: space-between;
+  }
+  .navbar .logo{
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+   ul{
+    list-style:none;
+  }
+  .navbar .menuIcon{
+    display: block;
+    cursor: pointer;
+  }
+  .navbar .menuIcon i{
+    font-size: 1.5em;
+    color: var(--first-color);
+  }
+  .navbar .menu-hamburguer{
+    display: block;    
+  }
+  .navLinks{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.349);
+    backdrop-filter: blur(8px);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform: translateX(-100%);
+    transition: all 0.5s ease;
+  }
+  .navLinks.active{
+    transform: translate(0);
+  }
+  .fa-xmark {
+    margin-left: 0;
+  }
+  .navLinks ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .navbar .navLinks{
+    display: flex;
+    align-items: cen;
+  }
+  .navbar .navLinks ul li{
+    margin: 15px 0;
+    font-size: 1.2rem;
+  }
+  .menu-hamburguer {
+    /* Estilo predeterminado para el ícono de hamburguesa */
+    color: var(--first-color);
+    transition: color 0.3s ease;
+  }
+  .menu-hamburguer.fa-xmark {
+    color: var(--second-color);
+  }
+  .navbar .fa-xmark {
+    /* Ajusta los estilos para el icono de cierre (fa-xmark) */
+    font-size: 1.5em;
+    color: var(--first-color);
+    cursor: pointer;
+  }
+  .menu-hamburguer:hover {
+    color: var(--second-color); 
+  }
+  header {
+    padding: 20px;
+    text-align: center;
+  }
+  .titleFamily, .textFamily{
+    color: var(--first-color);
+    font-family: var(--fuente);
+    margin-bottom: 10px;
+  }
+  /* footer */
+  .footerRow{
+    text-align: center;
+  }
+  .footerLinks{
+    width: 100%;
+    margin-bottom: 30px;
+  }
+}
+
+ /*---------- Diseño Responsive del comentario Section */
+ @media screen and (max-width: 600px) {
+  .comment-section {
+    margin: 10px; 
+    padding: 10px;
+  }
+  .comment-image {
+    width: 100%; 
+    height: auto; 
+    margin-top: 10px; 
+  }
+  header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .form-bg{
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .boxInfo{
+    gap: 15px;
+  }
+  .boxInfo > h2{
+    font-size: 1.5rem;
+  }
+}
