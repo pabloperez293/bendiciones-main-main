@@ -54,3 +54,26 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
+// Movimiento del mouse
+document.addEventListener("mousemove", move);
+function move(evt){
+  this.querySelectorAll(".moveRadio").forEach(layer => {
+    const speed = layer.getAttribute("data-speed")
+
+    const x = (window.innerWidth - evt.pageX*speed)/120
+    const y = (window.innerWidth - evt.pageY*speed)/120
+
+    layer.style.transform = `translateX(${x}px) translateY(${y}px)`
+
+  })
+}
+
+// cdn GSAP
+gsap.from(".logo",{opacity:0, duration:1, delay: 2, y:10})
+gsap.from(".navLinks",{opacity:0, duration:1, delay: 2.1, y:30, stagger:0.2})
+gsap.from(".radioHome",{opacity:0, duration:1, delay: 1.6, y:30})
+gsap.from(".contentRadio",{opacity:0, duration:1, delay: 1.8, y:30})
+gsap.from(".titleRadio",{opacity:0, duration:1, delay: 2, y:30})
+gsap.from(".descriptionRadio",{opacity:0, duration:1, delay: 2.1, y:30})
+gsap.from(".imageRadio",{opacity:0, duration:1, delay: 2.6, y:30})

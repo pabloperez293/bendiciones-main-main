@@ -33,6 +33,9 @@ header{
 ul{
   list-style-type: none;
 }
+section{
+  padding: 2rem 9%;
+}
 /* Texto header */
 .titleFamily{
   color: var(--first-color);
@@ -237,7 +240,7 @@ ul{
 /* ---------------- Radio */
 .radioHome{
   display: flex;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   gap: 1.5rem;
   min-height: 100vh;
   align-items: center;
@@ -246,6 +249,7 @@ ul{
 }
 .radioHome .contentRadio{
   flex: 1 1 40rem;
+  padding-top: 6.5rem;
 }
 .radioHome .contentRadio .titleRadio{
   font-size: 6rem;
@@ -276,7 +280,6 @@ ul{
 }
 .radioHome .contentRadio .btnRadio:hover{
   letter-spacing: .2rem;
-
 }
 .radioHome .imageRadio{
   flex: 1 1 40rem;
@@ -284,6 +287,9 @@ ul{
 .radioHome .imageRadio img{
   width: 100%;
 }
+
+
+
 /* ---------------- Form */
 .form-bg{
   display: flex;
@@ -466,6 +472,9 @@ a:hover{
 
 /* --------------------Responsive  */
 @media screen and (max-width: 900px) {
+  section{
+    padding: 2rem;
+  }
   .navbar{
     padding:20px;
     justify-content: space-between;
@@ -598,6 +607,18 @@ a:hover{
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+  .radioHome .contentRadio{
+    padding-top: 9.5rem;
+  }
+  .radioHome .imageRadio .img{
+    width: 368px;
+  }
+  .radioHome .contentRadio .titleRadio{
+    font-size: 4rem;
+  }
+  .radioHome .contentRadio .descriptionRadio{
+    font-size: 1.6rem;
   }
   .form-bg{
     width: 95%;
