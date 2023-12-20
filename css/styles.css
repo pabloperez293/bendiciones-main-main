@@ -43,13 +43,6 @@ ul{
   font-family: var(--fuente);
 }
 /* Menu */
-/* .menuIcon{
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  font-size: 1.0em;
-  cursor: pointer;
-} */
 .navbar.fixed .menuIcon{
   top: 10px;
   right: 10px;
@@ -112,7 +105,10 @@ ul{
   order: -1;
 }
 .navbar .menu-hamburguer{
-  display: none;
+  display: block;
+  font-size: 1.5em;
+  color: var(--first-color);
+  cursor: pointer;
 }
 /* ---------- Comentarios de la iglesia */
 .comment-section {
@@ -237,6 +233,56 @@ ul{
   width: 120px;
   border-radius: 50%;
 
+}
+/* ---------------- Radio */
+.radioHome{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background: #a3a3a3;
+}
+.radioHome .contentRadio{
+  flex: 1 1 40rem;
+}
+.radioHome .contentRadio .titleRadio{
+  font-size: 6rem;
+  color: var(--first-color);
+  text-transform: uppercase;
+}
+.radioHome .contentRadio .titleRadio span{
+  text-transform: uppercase;
+  color: var(--second-color);
+}
+.radioHome .contentRadio .descriptionRadio{
+  font-size: 2rem;
+  font-weight: lighter;
+  line-height: 1.8;
+  padding: 1rem 0;
+  color: var(--first-color) ;
+}
+.radioHome .contentRadio .btnRadio{
+  margin-top: 1rem;
+  display: inline-block;
+  padding: .9rem 3rem;
+  font-size: 1.7rem;
+  color: var(--first-color);
+  background: var(--second-color);
+  cursor: pointer;
+  border-radius: 15px;
+  text-decoration: none;
+}
+.radioHome .contentRadio .btnRadio:hover{
+  letter-spacing: .2rem;
+
+}
+.radioHome .imageRadio{
+  flex: 1 1 40rem;
+}
+.radioHome .imageRadio img{
+  width: 100%;
 }
 /* ---------------- Form */
 .form-bg{
@@ -372,7 +418,7 @@ a:hover{
 }
 .footer{
   background-color: #4444443d ;
-  padding: 80px 0;
+  padding: 40px 0;
 }
 .footerRow{
   display: flex;
@@ -440,7 +486,16 @@ a:hover{
     color: var(--first-color);
   }
   .navbar .menu-hamburguer{
-    display: block;    
+    display: block;
+    font-size: 1.5em;
+    color: var(--first-color);
+    cursor: pointer;
+  }
+  .navbar.fixed .menu-hamburguer {
+    top: 10px;
+    right: 10px;
+    border-radius: 50%;
+    padding: 10px;
   }
   .navLinks{
     position: fixed;
@@ -468,29 +523,45 @@ a:hover{
     align-items: center;
   }
   .navbar .navLinks{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.349);
+    backdrop-filter: blur(8px);
+    width: 100%;
+    height: 100vh;
     display: flex;
-    align-items: cen;
+    flex-direction: column;
+    align-items: center;
+    transform: translateX(-100%);
+    transition: all 0.5s ease;
   }
   .navbar .navLinks ul li{
     margin: 15px 0;
     font-size: 1.2rem;
   }
+  .navbar .navLinks.active {
+    transform: translate(0);
+  }
   .menu-hamburguer {
-    /* Estilo predeterminado para el ícono de hamburguesa */
+    display: block;
+    font-size: 1.5em;
     color: var(--first-color);
-    transition: color 0.3s ease;
+    cursor: pointer;
   }
   .menu-hamburguer.fa-xmark {
     color: var(--second-color);
   }
   .navbar .fa-xmark {
-    /* Ajusta los estilos para el icono de cierre (fa-xmark) */
     font-size: 1.5em;
     color: var(--first-color);
     cursor: pointer;
   }
   .menu-hamburguer:hover {
     color: var(--second-color); 
+  }
+  .navbar .menu-hamburguer.fa-xmark {
+    color: var(--second-color);
   }
   header {
     padding: 20px;
